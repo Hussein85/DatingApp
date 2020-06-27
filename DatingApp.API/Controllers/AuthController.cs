@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace DatingApp.API.Controllers
 {
 	[Route("api/[controller]")]
-	[ApiController]
+	[ApiController]         //	This will automatically validate the model and return BadRequest(ModelState) 
 	public class AuthController : ControllerBase
 	{
 		private readonly IAuthRepository _repo;
