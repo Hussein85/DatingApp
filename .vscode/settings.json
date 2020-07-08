@@ -14,5 +14,6 @@
         "jsbeautifyrc",
         "jshintrc",
         "ts"
-    ]
+    ],
+    "editor.detectIndentation": false
 }
