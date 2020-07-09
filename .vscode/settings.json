@@ -1,6 +1,5 @@
 {
-    "editor.insertSpaces": false,
-    "beautify.config": "",
+	"beautify.config": "",
 
     // Controls if the editor should automatically format the line after typing
     "beautify.onSave": true,
