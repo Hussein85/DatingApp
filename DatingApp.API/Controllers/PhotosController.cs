@@ -123,7 +123,7 @@ namespace DatingApp.API.Controllers
             return BadRequest("Could not set photo to main");
         }
 
-        [HttpDelete('{id}')]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePhoto(int userId, int id)
         {
 
