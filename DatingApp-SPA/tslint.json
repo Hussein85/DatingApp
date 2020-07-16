@@ -3,10 +3,10 @@
   "rules": {
     "align": {
       "options": [
-        "parameters",
         "statements"
       ]
     },
+    "disable-next-line": "align",
     "no-string-literal": false,
     "array-type": false,
     "arrow-return-shorthand": true,
