@@ -10,6 +10,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
+import { TimeagoModule } from 'ngx-timeago';
 
 import { ErrorInterceptorProvider } from './_services/error.intercepter';
 import { AppComponent } from './app.component';
@@ -57,6 +58,7 @@ export function tokenGetter() {
         BsDatepickerModule.forRoot(),
         TabsModule.forRoot(),
         RouterModule.forRoot(appRoutes),
+        TimeagoModule.forRoot(),
         NgxGalleryModule,
         FileUploadModule,
         JwtModule.forRoot({
