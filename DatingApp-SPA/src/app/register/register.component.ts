@@ -3,6 +3,7 @@ import { AuthService } from '../_services/auth.service';
 import { AlertifyService } from '../_services/alertify.service';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 
 @Component({
     selector: 'app-register',
@@ -13,11 +14,15 @@ export class RegisterComponent implements OnInit {
     @Output() cancelRegister = new EventEmitter();
     model: any = {};
     registerForm: FormGroup;
+    bsConfig: Partial<BsDatepickerConfig>;  // For chaning the theme of datePicker. User 'Partial' to make all fields optional
 
     constructor(private authService: AuthService, private alertify: AlertifyService,
         private fb: FormBuilder, private router: Router) { }
 
     ngOnInit(): void {
+        this.bsConfig = {
+            containerClass: 'theme-red'
+        };
         this.createRegisterForm();
 
     }

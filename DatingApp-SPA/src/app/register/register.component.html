@@ -35,12 +35,11 @@
   <!-- Date of birth -->
   <div class="form-group">
     <input [ngClass]="{'is-invalid': hasGeneralErrors('dateOfBirth')}" class="form-control" placeholder="Date of Birth"
-      formControlName="dateOfBirth" type="date">
+      formControlName="dateOfBirth" type="text" bsDatepicker [bsConfig]="bsConfig">
     <div class="invalid-feedback" *ngIf="hasSpecificError('dateOfBirth', 'required')">
       Date of Birth is required
     </div>
   </div>
-
 
   <!-- City -->
   <div class="form-group">
@@ -60,7 +59,6 @@
     </div>
   </div>
 
-
   <!-- Password -->
   <div class="form-group">
     <input type="password" [ngClass]="{'is-invalid': hasGeneralErrors('password')}" class="form-control"
@@ -75,7 +73,6 @@
       Password cannot exceed 14 charachters
     </div>
   </div>
-
 
   <!-- Confirm password -->
   <div class="form-group">
