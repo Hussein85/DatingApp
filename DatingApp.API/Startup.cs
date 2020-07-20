@@ -88,9 +88,14 @@ namespace DatingApp.API
             app.UseAuthentication();
             app.UseAuthorization();
 
+
+            app.UseDefaultFiles();      // Tell kestrel server to look for default file like index.html etc in wwwRoot
+            app.UseStaticFiles();       // Adds the ability to use static files
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapFallbackToController("Index", "Fallback");     // This solves the 404 error when refreshing the page. This error happens since our API are not aware of the angular routes.
             });
         }
     }
